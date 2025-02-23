@@ -1,0 +1,2 @@
+# ShopEase
+An ecommerce application
