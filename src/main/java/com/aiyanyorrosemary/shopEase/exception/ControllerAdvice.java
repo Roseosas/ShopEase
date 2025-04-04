@@ -11,11 +11,11 @@ import java.util.logging.Logger;
 @RestControllerAdvice
 public class ControllerAdvice {
 
-    private static final Logger log = (Logger) LoggerFactory.getLogger(ControllerAdvice.class);
+    //private static final Logger log = (Logger) LoggerFactory.getLogger(ControllerAdvice.class);
 
    @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<?> resourceNotFound(ResourceNotFoundException e) {
-        log.info(e.getMessage());
+        //log.info(e.getMessage());
         return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     }
 }

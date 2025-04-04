@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 @RestController
 @RequestMapping("api/v1/product")
 public class ProductController {
-    private static final Logger log = (Logger) LoggerFactory.getLogger(ProductController.class);
+   // private static final Logger log = (Logger) LoggerFactory.getLogger(ProductController.class);
 
 
     @Autowired
@@ -24,7 +24,7 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<Product> addProduct(@RequestBody ProductDto productRequest) {
 
-        log.info("Adding product {}");
+        //log.info("Adding product {}");
 
         Product createdProduct = productService.createProduct(productRequest);
 

@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 @RestController
 @RequestMapping("api/v1/order")
 public class OrderController {
-    private static final Logger log = (Logger) LoggerFactory.getLogger(OrderController.class);
+    //private static final Logger log = (Logger) LoggerFactory.getLogger(OrderController.class);
     @Autowired
     private OrderService orderService;
 
@@ -23,7 +23,12 @@ public class OrderController {
     @PostMapping
     public Order placeOrder(@RequestBody Order order) {
         return orderService.placeOrder(
-                order.getCustomer().getId(), order.getProducts().stream().map(Product::getId).toList());
+                order.getCustomer()
+                        .getId(),
+                order.getProducts()
+                        .stream()
+                        .map(Product::getId)
+                        .toList());
     }
 
     @GetMapping("/{customerId}")

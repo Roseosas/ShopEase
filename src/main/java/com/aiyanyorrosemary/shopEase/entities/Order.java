@@ -1,11 +1,12 @@
 package com.aiyanyorrosemary.shopEase.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Table(name = "customer_order")
 @Entity
 public class Order {
 @Id
